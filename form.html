@@ -29,10 +29,8 @@
 
         <section>
 
-            <article>
-              
             
-
+            <article>
                 <fieldset>
                     <legend>
                         <h5>Preencha seus dados abaixo no Prontuário Online</h5>
@@ -40,35 +38,36 @@
                     <form id="frmInscricao" action="contato.php" method="POST">
 
                         <label>Nome:</label>
-                        <input type="text" required="required" id="txtNome" size="30" maxlength="30" style="font-family: Tahoma; font-size: 15px"><br><br>
+                        <input type="text" required="required" id="txtNome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" size="30" maxlength="30" style="font-family: Tahoma; font-size: 15px"><br><br>
 
                         <label for="data">Data de nascimento:</label>
                         <input type="date" id="datanasc" name="data" style="font-family: Tahoma; font-size: 15px"><br><br>
-                        <label>Sexo:</label>
-                        <input type="radio" name="rdoSexo" value="F" required="required">
+
+                        <label required="required">Sexo:</label>
+                        <input type="radio" name="Sexo" value="F" >
                         <label>Feminino</label> 
-                        <input type="radio" name="rdoSexo" value="M" required="required">
+                        <input type="radio" name="Sexo" value="M" >
                         <label>Masculino</label><br><br>
                      
                         <label>Raça:</label>
-                        <input type="radio" name="raca" value="Pardo" >
+                        <input type="radio" name="raca" value="Pardo">
                         <label>Pardo(a)</label>
-                        <input type="radio" name="raBranco" value="Branco" >
+                        <input type="radio" name="raca" value="Branco" >
                         <label>Branco(a)</label>
                         <input type="radio" name="raca" value="Pardo" >
                         <label>Preto(a)</label> 
-                        <input type="radio" name="raindi" value="Indig" >
+                        <input type="radio" name="raca" value="Indig">
                         <label>Indígena</label>
-                        <input type="radio" name="raindi" value="Indig" >
+                        <input type="radio" name="raca" value="Indig" >
                         <label>Amarelo(a)</label><br><br>
                         
                         <label>Peso:</label>
-                        <input type="number" required="required" id="Peso" size="5" step="0.01" min="0" max="10" placeholder="Ex: 71kg" maxlength="4"  style="font-family: Tahoma; font-size: 15px">
+                        <input type="numeric" required="required" id="Peso" size="5" placeholder="Ex: 71kg" maxlength="4"  style="font-family: Tahoma; font-size: 15px">
                         <label>Altura:</label>
-                        <input type="number" required="required" id="Altura" size="5" step="0.01" min="0" max="10" placeholder="Ex: 1,70" maxlength="4" style="font-family: Tahoma; font-size: 15px"><br><br>
+                        <input type="numeric" required="required" id="Altura" size="5"  placeholder="Ex: 1,70" maxlength="4" style="font-family: Tahoma; font-size: 15px"><br><br>
 
                         <label>Telefone:</label>
-                        <input type="number" required="required" id="Celular" size="30" maxlength="11" placeholder="( )   -" maxlength="15" style="font-family: Tahoma; font-size: 15px"><br><br>
+                        <input type="tel" required="required" id="Celular" size="30" maxlength="11" placeholder="( )   -" maxlength="15" style="font-family: Tahoma; font-size: 15px"><br><br>
 
                         <label>Estado:</label>
                         <select id="cbxEstado" required="required" style="font-family: Tahoma; font-size: 15px"> 
@@ -100,11 +99,12 @@
                             <option value="SP">São Paulo</option>
                             <option value="SE">Sergipe</option>
                             <option value="TO">Tocantins</option>
-                        </select>
+                        </select><br><br>
+
                         <label for="CEP">Informe o CEP:</label>
-                        <input type="number" id="CEP" name="cep" size="30" maxlength="15"style="font-family: Tahoma; font-size: 15px">
-                        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank"><button id="btnPesquisar" type="button" name="btnPesquisarCEP" value="cep"  style="font-family: Tahoma; font-size: 15px"> Pesquisar CEP</button></a><br><br>
-                    
+                        <input type="numeric" id="CEP" name="cep" size="30" maxlength="15"style="font-family: Tahoma; font-size: 15px">
+                        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank"><button id="btnPesquisar" type="button" name="btnPesquisarCEP" value="cep" style="font-family: Tahoma; font-size: 15px">Pesquisar CEP</button></a><br><br>
+                      
 
                         <label>Nome do Pai:</label>
                         <input type="text" required="required" id="txtNomePai" size="30" maxlength="30" style="font-family: Tahoma; font-size: 15px"><br><br>
@@ -116,13 +116,13 @@
                         <input type="text" required="required" id="txtplano" size="30" maxlength="20" style="font-family: Tahoma; font-size: 15px">
 
                         <label>Matrícula Plano :</label>
-                        <input type="number" required="required" id="Matplano" size="30" maxlength="15" style="font-family: Tahoma; font-size: 15px"><br><br>
+                        <input type="numeric" required="required" id="Matplano" size="30" maxlength="15" style="font-family: Tahoma; font-size: 15px"><br><br>
 
                         <label>Vencimento Carteira:</label>
-                        <input type="text" required="required" id="txtVencplano" size="30" maxlength="5" style="font-family: Tahoma; font-size: 15px">
+                        <input type="numeric" required="required" id="txtVencplano" size="30" maxlength="5" style="font-family: Tahoma; font-size: 15px">
 
                         <label>Número Prontuário:</label>
-                        <input type="number" required="required" id="NPront" size="30" maxlength="15" style="font-family: Tahoma; font-size: 15px"><br><br>
+                        <input type="numeric" required="required" id="NPront" size="30" maxlength="15" style="font-family: Tahoma; font-size: 15px"><br><br>
 
                         <label>Senha do Painel:</label>
                         <input type="password" required="required" id="senha" size="30" maxlength="8" style="font-family: Tahoma; font-size: 15px">
@@ -130,11 +130,13 @@
                         <label for="data">Data e Hora do Atendimento:</label>
                         <input type="datetime-local" id="datanasc" name="data" style="font-family: Tahoma; font-size: 15px"><br><Br>
                 
+    
 
-                        <div class="button">
-                            <button type="submit" id="btnenviar" style="font-family: Tahoma; font-size: 18px">Enviar</button>
-                            <button type="submit" id="btncancel" style="font-family: Tahoma; font-size: 18px">Cancelar</button>
-                        </div>
+            <div class="button">
+                <button type="submit" id="btnenviar" onclick="cadastro()" style="font-family: Tahoma; font-size: 18px">Enviar</button>
+                <button type="submit" id="btncancel" onclick="cancel()"style="font-family: Tahoma; font-size: 18px">Cancelar</button>
+            </div>
+           
                         
 
 
