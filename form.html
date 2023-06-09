@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Geral</title>
+    <link rel="stylesheet"  href="./css/formstyle.css">
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <section>
+            <div class="btnmais">
+                <button type="submit" id="btn1" style="font-family: Tahoma; font-size: 25px">+</button>
+                <button type="submit" id="btn2" style="font-family: Tahoma; font-size: 25px">-</button>
+            </div>
+             <div>
+                <a href="index.html">Início</a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+
+        <section>
+
+            <article>
+                <fieldset>
+                    <legend>
+                        <h5>Preencha seus dados abaixo no Prontuário Online</h5>
+                    </legend>
+                    <form id="frmInscricao" action="contato.php" method="POST">
+
+                        <label>Nome:</label>
+                        <input type="text" required="required" id="txtNome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" size="30" maxlength="30" style="font-family: Tahoma; font-size: 15px"><br><br>
+
+                        <label for="data">Data de nascimento:</label>
+                        <input type="date" id="datanasc" name="data" style="font-family: Tahoma; font-size: 15px"><br><br>
+
+                        <label required="required">Sexo:</label>
+                        <input type="radio" name="Sexo" value="F" >
+                        <label>Feminino</label> 
+                        <input type="radio" name="Sexo" value="M" >
+                        <label>Masculino</label><br><br>
+                     
+                        <label>Raça:</label>
+                        <input type="radio" name="raca" value="Pardo">
+                        <label>Pardo(a)</label>
+                        <input type="radio" name="raca" value="Branco" >
+                        <label>Branco(a)</label>
+                        <input type="radio" name="raca" value="Pardo" >
+                        <label>Preto(a)</label> 
+                        <input type="radio" name="raca" value="Indig">
+                        <label>Indígena</label>
+                        <input type="radio" name="raca" value="Indig" >
+                        <label>Amarelo(a)</label><br><br>
+                        
+                        <label>Peso:</label>
+                        <input type="numeric" required="required" id="Peso" size="5" placeholder="Ex: 71kg" maxlength="4"  style="font-family: Tahoma; font-size: 15px">
+                        <label>Altura:</label>
+                        <input type="numeric" required="required" id="Altura" size="5"  placeholder="Ex: 1,70" maxlength="4" style="font-family: Tahoma; font-size: 15px"><br><br>
+
+                        <label>Telefone:</label>
+                        <input type="tel" required="required" id="Celular" size="30" maxlength="11" placeholder="( )   -" maxlength="15" style="font-family: Tahoma; font-size: 15px"><br><br>
+
+                        <label>Estado:</label>
+                        <select id="cbxEstado" required="required" style="font-family: Tahoma; font-size: 15px"> 
+                            <option value="">Selecione</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espirito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select><br><br>
+
+                        <label for="Cep">Informe o CEP:</label>
+                        <input type="numeric" id="CEP" name="cep" size="30" maxlength="15"style="font-family: Tahoma; font-size: 15px">
+                        <button id="btncep" onclick = "window.open ('https://buscacepinter.correios.com.br/app/endereco/index.php');"  style="font-family: Tahoma; font-size: 18px" >Buscar CEP</button><br><br>
+                    
+
+                        <label>Nome do Pai:</label>
+                        <input type="text" required="required" id="txtNomePai" size="30" maxlength="30" style="font-family: Tahoma; font-size: 15px"><br><br>
+
+                        <label>Nome da Mãe:</label>
+                        <input type="text" required="required" id="txtNomeMae" size="30" maxlength="30" style="font-family: Tahoma; font-size: 15px"><br><br>
+
+                        <label>Plano de Saúde:</label>
+                        <input type="text" required="required" id="txtplano" size="30" maxlength="20" style="font-family: Tahoma; font-size: 15px">
+
+                        <label>Matrícula Plano :</label>
+                        <input type="numeric" required="required" id="Matplano" size="30" maxlength="15" style="font-family: Tahoma; font-size: 15px"><br><br>
+
+                        <label>Vencimento Carteira:</label>
+                        <input type="numeric" required="required" id="txtVencplano" size="30" maxlength="5" style="font-family: Tahoma; font-size: 15px">
+
+                        <label>Número Prontuário:</label>
+                        <input type="numeric" required="required" id="NPront" size="30" maxlength="15" style="font-family: Tahoma; font-size: 15px"><br><br>
+
+                        <label>Senha do Painel:</label>
+                        <input type="password" required="required" id="senha" size="30" maxlength="8" style="font-family: Tahoma; font-size: 15px">
+
+                        <label for="data">Data e Hora do Atendimento:</label>
+                        <input type="datetime-local" id="datanasc" name="data" style="font-family: Tahoma; font-size: 15px"><br><Br>
+                            
+                            
+                            
+            <div class="button">
+                <button type="submit" id="btnenviar" onclick="cadastro()" style="font-family: Tahoma; font-size: 18px">Enviar</button>
+                <button type="submit" id="btncancel" onclick="cancel()"style="font-family: Tahoma; font-size: 18px">Cancelar</button>
+            </div>
+           
+                        
+
+
+                       
+
+                    
+
+                    </form>
+                </fieldset>
+            </article>
+
+        </section>
+    </main>
+
+
+
+    
+</body>
+</html>
